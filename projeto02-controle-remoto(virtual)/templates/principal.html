@@ -1,0 +1,28 @@
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body>
+        <p>Funções</p>
+        <ul>
+            <li>
+                <a href="/power">Ligar/Desligar</a>
+            </li>
+            <li>
+                <a href="/dormir/5">Dormir em 5 segundos</a>
+            </li>
+            <li>
+                <a href="/aumentaVolume">Volume +</a>
+            </li>
+            <li>
+                <a href="/diminuiVolume">Volume -</a>
+            </li>
+        </ul>
+        <p>Canais</p>
+        <ul>
+            {% for canal in lista_de_canais %}
+                <li>
+                    <a href="/canal/{{ canal['código'] }}">{{ canal['nome'] }}</a>
+                </li>
+             {% endfor %}
+        </ul>
+    </body>
+</html>
